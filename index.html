@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <title>SIRB Hotdogs</title>
+<style>
+    body {
+        background-color: beige;
+        font-family: sans-serif;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px gray;
+        max-width: 400px;
+    }
+    
+    h2 {
+        color: black;
+        border-bottom: 5px solid red;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+    input[type="text"], input[type="number"], textarea {
+        width: 350px;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid grey;
+        border-radius: 4px;
+        background-color: white;
+    }
+
+    input[type="button"] {
+        background-color: red;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+    
+    .menu-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+    }
+</style>
+</head>
+<body>
+
+    <form>
+        <h2>Menu</h2>
+
+        <label>Hotdog Buns</label>
+        <input type="checkbox" id="menu1" value="150"><br>
+
+        <label>Cheesy Hotdog Buns</label>
+        <input type="checkbox" id="menu2" value="100"><br>
+
+        <label>Cheesy Fries</label>
+        <input type="checkbox" id="menu3" value="50"><br>
+
+        <label>Coca-Cola</label>
+        <input type="checkbox" id="menu4" value="40"><br>
+            
+        <h2>Customer Information</h2>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name"><br>
+        <label for="contact">Contact Number:</label><br>
+        <input type="number" id="contact"><br>
+        <label for="address">Address:</label><br>
+        <input type="text" id="address"><br>
+        <input type="button" value="Order now" py-click="ordering_form">
+
+    </form>
+    <div id="output"></div>
+    <py-script src="main.py"></py-script>
+    
+</body>
+</html>
